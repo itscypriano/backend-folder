@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route('/api/formulario', methods=['POST'])
 def receber_dados():
@@ -14,5 +14,5 @@ def receber_dados():
     return jsonify({'message': 'Formulário recebido com sucesso!'}), 200
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
